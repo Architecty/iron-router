@@ -530,6 +530,14 @@ Template.MyButton.events({
 
 This will change the browser's url to `/one` and run the corresponding route.
 
+You can also get the url for a given route using JavaScript. 
+
+```javascript
+const routeUrl = Router.routes['routeName'].path([paramsObject], [queryObject]);
+
+const routeUrl = Router.routes['myRoutes'].path({_id: 1, secondParam: 'blah'}, {query: 'query_id=something'});
+```
+
 ### Using Redirects
 You can redirect from one route to another from inside a route function by using
 the `redirect` method inside your route function.
